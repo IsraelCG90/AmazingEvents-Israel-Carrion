@@ -59,8 +59,11 @@ h5 {
 }
 
 .tituloTarjetas {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     text-align: center;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .precio {
@@ -155,15 +158,6 @@ footer {
 
     #busqueda {
         width: 30rem;
-    }
-
-    .totalTarjetas {
-        width: 70%;
-    }
-
-    .cajaTres {
-        display: flex;
-        justify-content: center;
     }
 
     .cajaForm {
