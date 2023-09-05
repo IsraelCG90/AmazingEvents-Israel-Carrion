@@ -27,4 +27,4 @@ function mostrarTarjetas(todaLaInfo, id) {
     document.getElementById(id).innerHTML = todaLaInfo;
 };
 
-mostrarTarjetas(tarjeteroTotal, "cajaTres");
+mostrarTarjetas(tarjeteroTotal, "cajaTres"); 

@@ -8,7 +8,7 @@ function crearTarjeta(indiceArray) {
         </div>
             <div class="card-body d-flex justify-content-between align-items-center">
             <p class="precio"> $ ${indiceArray.price}</p>
-            <a href="./Assets/Pages/details.html" class="botonDetalles">Details</a>
+            <a href="../Pages/details.html" class="botonDetalles">Details</a>
         </div>
     </div>`;
 };
