@@ -14,10 +14,6 @@ header {
     width: 10rem;
 }
 
-.acordeon {
-    text-align: end;
-}
-
 /*---------------------------MAIN-------------------------------*/
 main {
     background-color: #cd9cb2;
@@ -30,18 +26,6 @@ main {
 
 h5 {
     font-size: 2rem !important;
-}
-
-.categorias {
-    text-align: center;
-}
-
-.cajaDos {
-    margin: 2rem 1rem;
-}
-
-#busqueda {
-    margin-top: 1rem;
 }
 
 .card {
@@ -106,7 +90,9 @@ th{
     padding-left: 1rem;
     background-color: #edbad1;
 }
-
+span{
+    font-weight:700 ;
+}
 /*---------------------------FOOTER-------------------------------*/
 
 footer {
@@ -140,6 +126,10 @@ footer {
         font-size: 3rem !important;
     }
     
+    .busqueda {
+        width: 25rem !important;
+    }
+    
     .banner {
         height: 15rem;
         object-fit: cover;
@@ -154,10 +144,6 @@ footer {
         display: flex;
         justify-content:space-around;
         align-items: center;
-    }
-
-    #busqueda {
-        width: 30rem;
     }
 
     .cajaForm {

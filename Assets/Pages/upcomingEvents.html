@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-md">
             <div class="container-fluid">
                 <img src="../Images/amazing_brand.png" alt="logotipo" class="logotipo" />
-                <div class="acordeon">
+                <div class="text-end">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -58,43 +58,13 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="cajaDos">
-            <div class="categorias">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="food-fair" value="food-fair">
-                    <label class="form-check-label" for="food-fair">Food Fair</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="museum" value="museum">
-                    <label class="form-check-label" for="museum">Museum</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="costume-party" value="costume-party" >
-                    <label class="form-check-label" for="costume-party">Costume Party</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="music-concert" value="music-concert" >
-                    <label class="form-check-label" for="music-concert">Music Concert</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="race" value="race" >
-                    <label class="form-check-label" for="race">Race</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="book-exchange" value="book-exchange" >
-                    <label class="form-check-label" for="book-exchange">Book Exchange</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="cinema" value="go-to-cinema" >
-                    <label class="form-check-label" for="cinema">Let's go to the cinema</label>
-                </div>
+        <div class="d-flex flex-wrap align-items-center justify-content-around m-4 gap-3">
+            <div class="checkBoxes text-center" id="checkBoxes">
             </div>
-            <div id="busqueda">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" aria-label="Search">
-                  <button class="btn" type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
+            <form class="d-flex px-2" role="search">
+              <input class="form-control busqueda" type="search" aria-label="Search">
+              <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+            </form>
         </div>
         <div class="d-flex justify-content-center flex-wrap gap-4" id="cajaTresUpcoming">  
         </div>
