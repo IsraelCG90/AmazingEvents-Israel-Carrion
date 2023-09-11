@@ -46,13 +46,9 @@ insertarHtml( estructuraCat( listaCategorias ), "checkBoxes" );
 /*-------------------------FILTRO-CHECKBOXES-------------------------------*/
 let $checkbox = document.getElementById("checkBoxes");
 
-$checkbox.addEventListener( "change", () => {
-    let tarjetasfiltradas = filtrar( tarjetasFiltroFecha );
-    insertarHtml( tarjetero(tarjetasfiltradas), "cajaTresUpcoming" )
-    
-})
+$checkbox.addEventListener( "change", filtrosCruzados)
 
-function filtrar(array){
+function filtroCheck(array){
     let checkList = document.querySelectorAll("input[type='checkbox']:checked");
     let arrayCheck = Array.from(checkList);
     let valoresCheck = arrayCheck.map( input => input.value)
@@ -69,3 +65,24 @@ function filtrar(array){
     };
     return filtradosCheck;
 }; 
+
+/*-------------------------FILTRO-SEARCH-------------------------------*/
+let $search = document.getElementById("busquedaIndex");
+let $lupa = document.getElementById("lupa");
+
+$lupa.addEventListener("click", (e) => {
+    e.preventDefault();
+    filtrosCruzados();
+    $search.value = "";
+});
+
+function filtroSearch(array, input){
+    let tarjetaFiltrada = array.filter(tarjeta => tarjeta.name.toLowerCase().includes(input.toLowerCase()))
+    return tarjetaFiltrada;
+};
+
+/*-------------------------FILTROS-CRUZADOS-------------------------------*/
+function filtrosCruzados(){
+    let filtroTotal = filtroSearch( filtroCheck(tarjetasFiltroFecha), $search.value );
+    insertarHtml( tarjetero(filtroTotal), "cajaTresUpcoming");
+};
