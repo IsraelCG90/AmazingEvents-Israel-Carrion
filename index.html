@@ -61,12 +61,13 @@
         <div class="d-flex flex-wrap align-items-center justify-content-around m-4 gap-3">
             <div class="checkBoxes text-center" id="checkBoxes">
             </div>
-            <form class="d-flex px-2" role="search">
-              <input class="form-control busqueda" type="search" aria-label="Search" name="search" id="busquedaIndex">
-              <button class="btn" type="submit"><i class="bi bi-search" id="lupa"></i></button>
+            <form class="d-flex px-2" role="search" id="search">
+              <input class="form-control busqueda" type="search" aria-label="Search" name="search" id="inputIndex">
+              <button class="btn" type="submit"><i class="bi bi-search"></i></button>
             </form>
         </div>
-        <div class="d-flex justify-content-center flex-wrap gap-4" id="cajaTres">
+        <div class="d-flex justify-content-center flex-wrap gap-4" id="contenedorCards">
+            
         </div>
     </main>
     <footer class="d-flex justify-content-between align-items-center">
@@ -78,7 +79,6 @@
         <h6>COHORTE 51</h6>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="./Assets/Script/data.js"></script>
-    <script src="./Assets/Script/index.js"></script>
+    <script type="module" src="./Assets/Script/index.js"></script>
 </body>
 </html>
