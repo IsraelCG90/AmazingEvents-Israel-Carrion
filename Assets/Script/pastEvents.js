@@ -1,4 +1,4 @@
-import { tarjetero, filtroFechaPast, estructuraCat, filtrosCruzados } from "../Modules/functions.js";
+import { tarjeteroUpcomingPast, filtroFechaPast, estructuraCat, filtrosCruzadosUpPast } from "../Modules/functions.js";
 
 const URL_API = 'https://mindhub-xj03.onrender.com/api/amazing';
 
@@ -7,24 +7,23 @@ let $checkbox = document.getElementById("checkBoxes");
 let $input = document.getElementById("inputPast");
 let $search = document.getElementById("search");
 
-let eventos;
+let eventosFiltrados;
 
 fetch ( URL_API )
   .then( response => response.json())
   .then( ( {events, currentDate} ) => {
-    eventos = events;
-    let eventosFiltrados = filtroFechaPast(events, currentDate);
-    $contenedorCards.innerHTML = tarjetero(eventosFiltrados);
+    eventosFiltrados = filtroFechaPast(events, currentDate);
+    $contenedorCards.innerHTML = tarjeteroUpcomingPast(eventosFiltrados);
     let listaCategorias = [...new Set(events.map(evento => evento.category))];
     $checkbox.innerHTML = estructuraCat(listaCategorias);
   })
   .catch( err => console.log(err))
 
 $checkbox.addEventListener( "change", () => {
-  filtrosCruzados(eventos, $input, $contenedorCards)
+  filtrosCruzadosUpPast(eventosFiltrados, $input, $contenedorCards)
 })
 
 $search.addEventListener("click", (e) => {
-    e.preventDefault();
-    filtrosCruzados(eventos, $input, $contenedorCards)
+  e.preventDefault();
+  filtrosCruzadosUpPast(eventosFiltrados, $input, $contenedorCards)
 })
