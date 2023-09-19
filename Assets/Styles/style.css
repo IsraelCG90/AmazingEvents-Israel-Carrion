@@ -74,6 +74,7 @@ h5 {
     margin-top: 2rem;
     background-color: #fed2e5;
     border: 1px solid #8f6277;
+    width: 100%;
 }
 
 tr>td, th {
@@ -158,7 +159,7 @@ footer {
     }
 
     .tablastats {
-        width: 80% !important;
+        width: 65% !important;
     }
 
     tr>td, th {

@@ -80,12 +80,18 @@ export function filtroSearch(eventos, input){
 /*--------------------------------FILTRO-CRUZADO-------------------------------*/
 export function filtrosCruzados(eventos, input, contenedor){
     let resultadoFiltro = filtroSearch( filtroCheck(eventos), input.value );
+    if(resultadoFiltro.length == 0 ){
+        return contenedor.innerHTML = "<h3>There is no such event.</h3>";
+    }
     contenedor.innerHTML = tarjetero(resultadoFiltro);
 };
 
 /*----------------------FILTRO-CRUZADO-UPCOMING-PAST---------------------------*/
 export function filtrosCruzadosUpPast(eventos, input, contenedor){
     let resultadoFiltro = filtroSearch( filtroCheck(eventos), input.value );
+    if(resultadoFiltro.length == 0 ){
+        return contenedor.innerHTML = "<h3>There is no such event.</h3>";
+    }
     contenedor.innerHTML = tarjeteroUpcomingPast(resultadoFiltro);
 };
 
@@ -163,12 +169,14 @@ export function segundaTabla(categorias, eventos){
                 ganancia += (e.estimate * e.price)
                 porcentaje += (e.estimate * 100 / e.capacity)/(eventoPorCat.length)
         })
-        tabla += `
-        <tr>
-            <td>${categoria}</td>
-            <td>$${ganancia.toLocaleString()}</td>
-            <td>${porcentaje.toFixed(2)}%</td>
-        </tr>`
+        if(ganancia !== 0 && porcentaje !== 0){
+            tabla += `
+            <tr>
+                <td>${categoria}</td>
+                <td>$${ganancia.toLocaleString()}</td>
+                <td>${porcentaje.toFixed(2)}%</td>
+            </tr>`
+        }
     });
     return tabla;
 }

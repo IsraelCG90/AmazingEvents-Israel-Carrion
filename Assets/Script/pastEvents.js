@@ -14,7 +14,7 @@ fetch ( URL_API )
   .then( ( {events, currentDate} ) => {
     eventosFiltrados = filtroFechaPast(events, currentDate);
     $contenedorCards.innerHTML = tarjeteroUpcomingPast(eventosFiltrados);
-    let listaCategorias = [...new Set(events.map(evento => evento.category))];
+    let listaCategorias = [...new Set(eventosFiltrados.map(evento => evento.category))];
     $checkbox.innerHTML = estructuraCat(listaCategorias);
   })
   .catch( err => console.log(err))
